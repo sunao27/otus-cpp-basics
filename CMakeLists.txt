@@ -1,16 +1,11 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.15)
+project(guess_the_number CXX)
 
-project(02.hello_world)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(hello_world 
-    hello_world.cpp
-    example.cpp
-    example.h
-    move_me_out.cpp   # Добавили файл реализации
-    move_me_out.h     # Добавили заголовочный файл
-)
-
-set_target_properties(hello_world PROPERTIES
-    CXX_STANDARD 17
-    CXX_STANDARD_REQUIRED ON
+add_executable(guess_the_number
+    main.cpp
+    game.cpp
+    high_scores.cpp
 )
